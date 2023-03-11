@@ -5,3 +5,6 @@ build
 
 # env
 .env
+
+# private files
+*.pem
