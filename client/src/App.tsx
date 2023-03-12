@@ -32,8 +32,12 @@ const cache = new InMemoryCache({
   },
 });
 
+console.log('env');
+
 const apolloClient = new ApolloClient({
-  uri: 'http://localhost:3001/graphql',
+  uri: import.meta.env.DEV
+    ? 'http://localhost:3001/graphql'
+    : 'http://13.127.119.86:3001/graphql',
   cache,
 });
 
